@@ -1,0 +1,23 @@
+apply plugin: "java"
+
+group = 'pl.dk.presentations'
+version = '1.0.2-SNAPSHOT'
+
+dependencies {
+    testCompile "junit:junit:4.11"
+    compile "org.springframework:spring-core:4.1.1.RELEASE"
+}
+
+sourceCompatibility = 1.7
+targetCompatibility = 1.7
+compileJava.options.encoding = 'UTF-8'
+
+apply plugin: 'checkstyle'
+
+repositories {
+    mavenCentral()
+    maven {
+        name 'Sonatype Repository'
+        url "http://oss.sonatype.org/content/groups/public"
+    }
+}
